@@ -1,4 +1,4 @@
-# Import NLTK and requests libraries
+# Import NLTK, requests and matplotlib libraries
 import nltk
 import requests
 import matplotlib
@@ -15,7 +15,6 @@ moby_dick_text = requests.get(moby_dick_url).text
 
 # Tokenize the entire book
 tokens = nltk.word_tokenize(moby_dick_text)
-
 # Filter out the stopwords
 stopwords = nltk.corpus.stopwords.words('english')
 filtered_tokens = [token for token in tokens if token not in stopwords]
